@@ -1,0 +1,147 @@
+:root {
+  --accent: #f57c00;
+  --primary: #002f6c;
+  --dark: #2c3e50;
+  --orange: #f4511e;
+  --blue: #039be5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+}
+
+.navbar-logo {
+  height: 60px; /* altura fija del contenedor del logo */
+  overflow: visible; /* corta los bordes si la imagen los tiene */
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: Nunito, sans-serif;
+}
+
+.navbar-logo-img {
+  height: 144px; /* ajustable según tamaño deseado */
+  width: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin-left: -25px;
+}
+
+.logo-primari-text {
+  color: #002f6c;
+}
+
+.logo-secundari-text {
+  color: #f57c00;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 500;
+  transition: color 0.3s;
+  font-family: Nunito, sans-serif;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+}
+
+.btn-Cotizar {
+  background-color: var(--orange);
+  border-radius: 24px;
+  color: #fff;
+}
+
+/* BOTÓN de menú hamburguesa */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    z-index: 11;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    padding: 80px 20px 20px;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 10;
+  }
+
+  .mobile-menu.open {
+    left: 0;
+  }
+
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    gap: 15px;
+  }
+
+  .nav-links-mobile li a {
+    display: block;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 500;
+    text-align: center;
+    font-family: Nunito, sans-serif !important;
+  }
+
+  .nav-links-mobile li a:hover {
+    background-color: var(--orange);
+    color: white;
+  }
+
+  .navbar-logo {
+    height: 30px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-logo-img {
+    height: 72px;
+    width: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    margin-left: -30px;
+  }
+}
