@@ -1,4 +1,3 @@
-import React from 'react'
 import './home.sass'
 import Banner from '../../components/Banner'
 import Delimiter from '../../components/delimiter'
